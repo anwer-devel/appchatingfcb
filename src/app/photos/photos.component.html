@@ -1,0 +1,14 @@
+
+  <div class="central-meta">
+    <ul class="photos">
+
+      <li *ngFor="let photo of photos">
+        <a class="strip" href="{{photo.urlphoto}}" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
+          <img src="{{photo.urlphoto}}" alt=""  >
+
+        </a>
+
+      </li>
+
+    </ul>
+    <div class="lodmore"><button class="btn-view btn-load-more"></button></div>

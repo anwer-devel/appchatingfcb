@@ -1,0 +1,65 @@
+<div class="central-meta">
+  <div class="frnds">
+    <ul class="nav nav-tabs">
+       <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">My Friends</a> </li>
+       <li class="nav-item"><a class="" href="#frends-req" data-toggle="tab" *ngIf="isowner">Friend Requests</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active fade show " id="frends" >
+      <ul class="nearby-contct"  *ngFor="let friend of friends">
+
+
+      <li>
+        <div class="nearly-pepls" *ngIf="id != friend.firstUser.id && friend.is_Friend " >
+          <figure>
+            <a  [routerLink]="['/friend', friend.firstUser.id,id]"  title=""><img src="{{friend.firstUser.urlprof}}" alt=""></a>
+          </figure>
+          <div class="pepl-info">
+            <h4><a [routerLink]="['/friend', friend.firstUser.id,id]" title="">{{friend.firstUser.name + " " + friend.firstUser.lastname}} </a></h4>
+            <span>Student</span>
+            <a (click)="delFriend(friend.id)" title="" class="add-butn more-action" data-ripple="">unfriend</a>
+
+          </div>
+        </div>
+
+        <div class="nearly-pepls" *ngIf="id != friend.secondUser.id && friend.is_Friend"  >
+          <figure>
+            <a [routerLink]="['/friend', friend.secondUser.id,id]" title=""><img src="{{friend.secondUser.urlprof}}" alt=""></a>
+          </figure>
+          <div class="pepl-info">
+            <h4><a  [routerLink]="['/friend', friend.secondUser.id,id]"  title="">{{friend.secondUser.name + " " + friend.secondUser.lastname}} </a></h4>
+            <span>Student</span>
+            <a  (click)="delFriend(friend.id)" title="" class="add-butn more-action" data-ripple="">unfriend</a>
+
+          </div>
+        </div>
+      </li>
+    </ul>
+      <div class="lodmore"><button class="btn-view btn-load-more"></button></div>
+      </div>
+
+
+
+      <div class="tab-pane fade" id="frends-req" *ngIf="isowner" >
+      <ul class="nearby-contct" *ngFor="let friend of friends" >
+      <li  *ngIf="id != friend.firstUser.id && !friend.is_Friend ">
+        <div class="nearly-pepls"  >
+          <figure>
+            <a href="time-line.html" title=""><img  src="{{friend.firstUser.urlprof}}" alt=""></a>
+          </figure>
+          <div class="pepl-info">
+            <h4><a href="time-line.html" title="">{{friend.firstUser.name + " " + friend.firstUser.lastname}}</a></h4>
+            <span>ftv model</span>
+            <h4> <a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a></h4>
+            <a (click)="asFriend(friend.id)" title="" class="add-butn" data-ripple="">Confirm</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+        <button class="btn-view btn-load-more"></button>
+      </div>
+    </div>
+  </div>
+</div>

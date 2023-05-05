@@ -1,0 +1,102 @@
+
+<body>
+  <!--<div class="se-pre-con"></div>-->
+  <div class="theme-layout">
+    <div class="container-fluid pdng0">
+      <div class="row merged">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="land-featurearea">
+            <div class="land-meta">
+              <h1>Social Media</h1>
+              <p>
+               Welcome
+              </p>
+              <div class="friend-logo">
+                <span><img src="images/wink.png" alt=""></span>
+              </div>
+              <a href="#" title="" class="folow-me">Follow Us on</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="login-reg-bg">
+            <div class="log-reg-area sign">
+              <h2 class="log-title">Login</h2>
+                <p>
+                  Don’t use Winku Yet? <a href="#" title="">Take the tour</a> or <a href="#" title="">Join now</a>
+                </p>
+              <form method="post" name="f1">
+                <div class="form-group">
+                  <input type="text" id="input" name="mail" [(ngModel)]="mail" required="required"/>
+                  <label class="control-label" for="input">Mail</label><i class="mtrl-select"></i>
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password"  [(ngModel)]="password" required="required"/>
+                  <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
+                </div>
+                <div class="checkbox">
+                  <label>
+                  <input type="checkbox" checked="checked"/><i class="check-box"></i>Always Remember Me.
+                  </label>
+                </div>
+                <a href="#" title="" class="forgot-pwd">Forgot Password?</a>
+                <div class="submit-btns">
+                  <button class="mtr-btn signin" type="button" (click)="login()"><span>Login</span></button>
+                  <button class="mtr-btn signup" type="button"><span>Register</span></button>
+                </div>
+              </form>
+            </div>
+            <div class="log-reg-area reg">
+              <h2 class="log-title">Register</h2>
+                <p>
+                  Don’t use Winku Yet? <a href="#" title="">Take the tour</a> or <a href="#" title="">Join now</a>
+                </p>
+              <form method="post" name="f2"  >
+                <div class="form-group">
+                  <input type="text" name="firstname" [(ngModel)]="firstname" required="required"/>
+                  <label class="control-label" for="input"  >First</label><i class="mtrl-select"></i>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="lastname" [(ngModel)]="lastname" required="required"/>
+                  <label class="control-label" for="input" >Last Name</label><i class="mtrl-select"></i>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="rmail"  [(ngModel)]="rmail" required="required"/>
+                  <label class="control-label" for="input" >Mail</label><i class="mtrl-select"></i>
+                </div>
+                <div class="form-group">
+                  <input type="password"  name="rpassword" [(ngModel)]="rpassword" required="required"/>
+                  <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
+                </div>
+                <div class="form-radio">
+                  <div class="radio" >
+                  <label>
+                    <input type="radio" name="radio" checked="checked" name="gander" [(ngModel)]="gander"/><i class="check-box"></i>Male
+                  </label>
+                  </div>
+                  <div class="radio">
+                  <label>
+                    <input type="radio" name="radio"/><i class="check-box"></i>Female
+                  </label>
+                  </div>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                  <input type="checkbox" checked="checked"/><i class="check-box"></i>Accept Terms & Conditions ?
+                  </label>
+                </div>
+                <a href="#" title="" class="already-have">Already have an account</a>
+                <div class="submit-btns">
+                  <button class="mtr-btn signup" type="button" (click)="register()"><span>Register</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </body>

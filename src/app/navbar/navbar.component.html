@@ -1,0 +1,284 @@
+
+
+  <div class="theme-layout">
+    <div *ngIf="loaderService.isLoadong | async" class="loader-container">
+      <mat-spinner style="top: 100%; right: 0%; ; width: 50%; " color="primary"></mat-spinner>
+    </div>
+    <div class="responsive-header">
+      <div class="mh-head first Sticky">
+        <span class="mh-btns-left">
+          <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
+        </span>
+        <span class="mh-text">
+          <a href="newsfeed.html" title=""><img src="/assets/images/resources/espita.png" alt=""></a>
+        </span>
+        <span class="mh-btns-right">
+          <a class="fa fa-sliders" href="#shoppingbag"></a>
+        </span>
+      </div>
+      <div class="mh-head second">
+        <form class="mh-form">
+          <input placeholder="search" name="sersh" />
+          <!--button  type="submit" (click)="change()">Send</button!-->
+        </form>
+      </div>
+
+
+    </div><!-- responsive header -->
+
+    <div class="topbar stick">
+      <div class="logo">
+        <a title="" href="newsfeed.html"><img src="/assets/images/resources/espita.png" alt=""></a>
+      </div>
+
+      <div class="top-area">
+        <div class="top-search">
+          <form method="post" class="">
+            <input type="text" placeholder="Search Friend !!!" name="searchs" [(ngModel)]="search" (keyup)="changes();">
+            <button data-ripple><i class="ti-search" (click)="changes();"></i></button>
+          </form>
+        </div>
+        <ul class="setting-area">
+          <li><a [routerLink]="['/profile']" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
+          <li>
+            <a  title="Notification" data-ripple="">
+              <i class="ti-bell"></i><span>20</span>
+            </a>
+            <div class="dropdowns">
+              <span>4 New Notifications</span>
+              <ul class="drops-menu">
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-1.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>sarah Loren</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag green">New</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-2.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Jhon doe</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag red">Reply</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-3.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Andrew</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag blue">Unseen</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-4.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Tom cruse</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag">New</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-5.jpg" alt="">
+                    <div class="mesg-meta">
+                      this.sockserv.connect()
+                      <h6>Amy</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag">New</span>
+                </li>
+
+              </ul>
+              <a href="notifications.html" title="" class="more-mesg">view more</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
+            <div class="dropdowns">
+              <span>5 New Messages</span>
+              <ul class="drops-menu">
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-1.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>sarah Loren</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag green">New</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-2.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Jhon doe</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag red">Reply</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-3.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Andrew</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag blue">Unseen</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-4.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Tom cruse</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag">New</span>
+                </li>
+                <li>
+                  <a href="notifications.html" title="">
+                    <img src="/assets/images/resources/thumb-5.jpg" alt="">
+                    <div class="mesg-meta">
+                      <h6>Amy</h6>
+                      <span>Hi, how r u dear ...?</span>
+                      <i>2 min ago</i>
+                    </div>
+                  </a>
+                  <span class="tag">New</span>
+                </li>
+              </ul>
+              <a href="messages.html" title="" class="more-mesg">view more</a>
+            </div>
+          </li>
+          <li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
+            <div class="dropdowns languages">
+              <a href="#" title=""><i class="ti-check"></i>English</a>
+              <a href="#" title="">Arabic</a>
+              <a href="#" title="">Dutch</a>
+              <a href="#" title="">French</a>
+            </div>
+          </li>
+
+          <li>
+
+          </li>
+          <li>
+            <button type="button"   [routerLink]="['/auth']">Logout</button>
+          </li>
+
+
+        </ul>
+
+        <div class="user-img">
+          <img src="{{urlprof}}" alt="">
+          <span class="status f-online"></span>
+          <div class="user-setting">
+            <a href="#" title=""><span class="status f-online"></span>online</a>
+            <a href="#" title=""><span class="status f-away"></span>away</a>
+            <a href="#" title=""><span class="status f-off"></span>offline</a>
+            <a href="#" title=""><i class="ti-user"></i> view profile</a>
+            <a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
+            <a href="#" title=""><i class="ti-target"></i>activity log</a>
+            <a href="#" title=""><i class="ti-settings"></i>account setting</a>
+            <a href="#" title=""><i class="ti-power-off"></i>log out</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- topbar -->
+
+
+
+</div><!-- right sidebar user chat -->
+    <div class="fixed-sidebar right" >
+      <div class="chat-friendz" >
+
+        <ul class="chat-users"   *ngFor="let friend of friends let index = index"    >
+          <li  (click)="showmessage(friend.firstUser)"  *ngIf="id != friend.firstUser.id && friend.is_Friend ">
+            <div class="author-thmb"  >
+              <img src="{{friend.firstUser.urlprof}}" alt="">
+              <span class="status f-online"></span>
+            </div>
+          </li>
+          <li (click)="showmessage(friend.secondUser)" *ngIf="id != friend.secondUser.id && friend.is_Friend">
+            <div class="author-thmb"  >
+              <img src="{{friend.secondUser.urlprof}}" alt="">
+              <span class="status f-away"></span>
+            </div>
+          </li>
+        </ul>
+
+
+        <div class="chat-box ">
+          <div class="chat-head">
+            <span class="status f-online"></span>
+            <h5 *ngIf="desc">{{desc.name +" "+ desc.lastname }}</h5>
+            <div class="more">
+              <span class="more-optns"><i class="ti-more-alt"></i>
+                <ul>
+                  <li>block chat</li>
+                  <li>unblock chat</li>
+                  <li>conversation</li>
+                </ul>
+              </span>
+              <span class="close-mesage"><i class="ti-close"></i></span>
+            </div>
+          </div>
+          <div class="chat-list" >
+            <ul   >
+              <div *ngFor="let s of send">
+                <li class="me"  *ngIf="s.from == mail" >
+                  <div class="chat-thumb"><img src="{{user.urlprof}}" alt=""></div>
+                  <div class="notification-event">
+                    <span class="chat-message-item">
+                      {{s.message}}
+                     </span>
+                    <span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
+                  </div>
+                </li>
+                <li class="you"  *ngIf="s.from == seconduser"   >
+                  <div class="chat-thumb"><img src="{{seconduserprof}}" alt=""></div>
+                  <div class="notification-event">
+                    <span class="chat-message-item">
+                      {{s.message}}
+                    </span>
+                    <span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
+                  </div>
+                </li>
+
+              </div>
+
+
+            </ul>
+
+            <div class="message-text-container">
+              <form method="post">
+                <textarea  name="messgae" [(ngModel)]="mess"></textarea>
+                <button title="send" (click)="sendmessge()"><i class="fa fa-paper-plane"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

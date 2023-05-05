@@ -1,0 +1,159 @@
+
+  <div class="loadMore">
+    <div class="central-meta item">
+      <div class="new-postbox" *ngIf="isowner">
+        <figure>
+          <img class="icon" src="{{user.urlprof}}" alt="">
+        </figure>
+        <div class="newpst-input">
+          <form method="post">
+            <textarea   name="body" [(ngModel)]="body" (change)="afichbody()" rows="2" placeholder="write something"></textarea>
+            <div class="attachments">
+              <ul>
+
+                <li>
+                  <i class="fa fa-image"></i>
+                  <label class="fileContainer">
+                    <input type="file" (change)="AddNewPost($event)" accept="image/png, image/jpeg , image/gif">
+                  </label>
+                </li>
+
+
+                <li>
+                  <button type="button" (click)="updloadphototocloud(3)">Publish</button>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- add post new box -->
+
+    <div class="central-meta item" *ngFor="let post of Posts ; let index = index; let islast = first;" >
+      <div class="user-post"  >
+
+        <div class="friend-info"  >
+
+          <figure>
+            <img   class="icon" src="{{post.user.urlprof}}" alt="">
+          </figure>
+
+          <div class="friend-name">
+            <ins><a href="time-line.html" title="">{{post.user.name +" "+ post.user.lastname}}</a></ins>
+            <span>published: {{post.datepost}}</span>
+          </div>
+          <div class="post-meta">
+            <img src="{{post.photo}}" alt="">
+
+            <div class="description">
+
+              <p>
+                {{post.title}}
+              </p>
+              <div class="we-video-info">
+                <ul>
+
+                  <li>
+                    <span class="views" data-toggle="tooltip" title="views">
+                      <i class="fa fa-eye"></i>
+                      <ins>1.2k</ins>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="comment" data-toggle="tooltip" title="Comments">
+                      <i class="fa fa-comments-o"></i>
+                      <ins>52</ins>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="like" data-toggle="tooltip" title="like">
+                      <i class="ti-heart"></i>
+                      <ins>{{post.likes}}</ins>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="dislike" data-toggle="tooltip" title="dislike">
+                      <i class="ti-heart-broken"></i>
+                      <ins>{{post.dislike}}</ins>
+                    </span>
+                  </li>
+                  <li class="social-media">
+                    <div class="menu">
+                      <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
+                      </div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
+                      </div>
+                      </div>
+                      <div class="rotater">
+                      <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
+                      </div>
+                      </div>
+
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="coment-area"  >
+          <form method="post" *ngIf="isowner">
+            <button type="button" (click)="DeletePost(post.id,index)">Delete</button>
+          </form>
+          <ul class="we-comet" >
+
+            <li *ngFor="let comm of post.comments ">
+              <div class="comet-avatar" >
+                <img  class="icon" src="{{comm.user.urlprof}}" alt="">
+              </div>
+              <div class="we-comment">
+                <div class="coment-head">
+                  <h5><a href="time-line.html" title="">{{comm.user.name +" "+comm.user.lastname}}</a></h5>
+                  <span>{{comm.datecomment}}</span>
+                  <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                </div>
+                <p>{{comm.body}}</p>
+              </div>
+            </li>
+
+            <li>
+              <a href="#" title="" class="showmore underline">more comments</a>
+            </li>
+
+            <li class="post-comment">
+              <div class="comet-avatar">
+                <img   src="{{post.user.urlprof}}" alt="">
+              </div>
+              <div class="post-comt-box">
+                <form method="post">
+                  <textarea [(ngModel)]="message" (change)="change"  name="message"placeholder="Post your comment"></textarea>
+                     <button  type="submit" (click)="AddComment(post.id,index)">Send</button>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+

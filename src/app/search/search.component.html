@@ -1,0 +1,18 @@
+<div class="central-meta">
+  <!-- near by map -->
+  <ul class="nearby-contct" *ngFor="let user of users">
+    <li >
+      <div class="nearly-pepls">
+        <figure>
+          <a [routerLink]="['/friend', user.id,id]" title=""><img src="{{user.urlprof}}" alt=""></a>
+        </figure>
+        <div class="pepl-info">
+          <h4><a [routerLink]="['/friend', user.id,id]" href="time-line.html" title="">{{user.name + " " + user.lastname}}</a></h4>
+          <span>ftv model</span>
+          <a  title="" class="add-butn" data-ripple="" (click)="sendReq(user.id)">add friend</a>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</div><!-- photos -->
